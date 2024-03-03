@@ -1,4 +1,4 @@
-import DisplayingTheMap
+import DisplayingTheMap #проверка пуша
 import GameProcess
 
 # Основная программа
