@@ -1,6 +1,6 @@
 import DisplayingTheMap #проверка пуша
 import GameProcess
-
+#наська
 # Основная программа
 game_over = False
 player1 = True
