@@ -11,9 +11,9 @@ def get_result():
     win = ""
 
     for i in MapInitialization.victories:
-        if MapInitialization.maps[i[0]] == "X" and MapInitialization.maps[i[1]] == "X" and MapInitialization.maps[i[2]] == "X":
-            win = "X"
-        if MapInitialization.maps[i[0]] == "O" and MapInitialization.maps[i[1]] == "O" and MapInitialization.maps[i[2]] == "O":
-            win = "O"
+        if MapInitialization.maps[i[0]] == "❌" and MapInitialization.maps[i[1]] == "❌" and MapInitialization.maps[i[2]] == "❌":
+            win = "❌"
+        if MapInitialization.maps[i[0]] == "⭕" and MapInitialization.maps[i[1]] == "⭕" and MapInitialization.maps[i[2]] == "⭕":
+            win = "⭕"
 
     return win
