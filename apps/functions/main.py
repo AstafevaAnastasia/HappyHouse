@@ -19,11 +19,9 @@ while game_over == False:
             if player1 == True:
                 symbol = "❌"
                 step = int(input("Человек 1, ваш ход: "))
-                print(steps)
             else:
                 symbol = "⭕"
                 step = int(input("Человек 2, ваш ход: "))
-                print(steps)
 
             GameProcess.step_maps(step, symbol)  # делаем ход в указанную ячейку
             win = GameProcess.get_result()  # определим победителя

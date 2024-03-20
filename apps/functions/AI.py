@@ -8,14 +8,14 @@ def check_line(sum_O, sum_X):
         x = 0
 
         for j in range(0, 3):
-            if MapInitialization.maps[line[j]] == "O":
+            if MapInitialization.maps[line[j]] == "⭕":
                 o = o + 1
-            if MapInitialization.maps[line[j]] == "X":
+            if MapInitialization.maps[line[j]] == "❌":
                 x = x + 1
 
         if o == sum_O and x == sum_X:
             for j in range(0, 3):
-                if MapInitialization.maps[line[j]] != "O" and MapInitialization.maps[line[j]] != "X":
+                if MapInitialization.maps[line[j]] != "⭕" and MapInitialization.maps[line[j]] != "❌":
                     step = MapInitialization.maps[line[j]]
 
     return step
@@ -38,12 +38,12 @@ def AI():
 
         # 4) центр пуст, то занимаем центр
     if step == "":
-        if MapInitialization.maps[4] != "X" and MapInitialization.maps[4] != "O":
+        if MapInitialization.maps[4] != "❌" and MapInitialization.maps[4] != "⭕":
             step = 5
 
             # 5) если центр занят, то занимаем первую ячейку
     if step == "":
-        if MapInitialization.maps[0] != "X" and MapInitialization.maps[0] != "O":
+        if MapInitialization.maps[0] != "❌" and MapInitialization.maps[0] != "⭕":
             step = 1
 
     return step
