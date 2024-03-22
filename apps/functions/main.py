@@ -1,6 +1,9 @@
 import DisplayingTheMap
 import GameProcess
 import AI
+import pygame
+
+pygame.init()
 
 human_or_computer = int(input("Who do you want to play with? (1 - human, 2 - computer): "))
 
