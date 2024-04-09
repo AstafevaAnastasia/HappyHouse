@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed82a276-f816-4c9b-9588-829627ee6bc1" name="Changes" comment="переструктурировала под два поля (5х5 и 3х3)">
-      <change afterPath="$PROJECT_DIR$/apps/functions/5x5/CheckWin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/functions/5x5/PrintBoard.py" afterDir="false" />
+    <list default="true" id="ed82a276-f816-4c9b-9588-829627ee6bc1" name="Changes" comment="Настраиваю 5x5">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_03_2024_8_09_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_03_2024_8_09__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_03_2024_9_16_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_03_2024_9_16__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2024_18_22_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_03_2024_18_22__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/functions/5x5/main5.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/functions/5x5/main5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/functions/3x3/AI.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/functions/3x3/AI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/functions/5x5/PrintBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/functions/5x5/PrintBoard.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +44,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.CheckWin.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.main3.executor": "Run",
+    "Python.main5.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -110,6 +118,9 @@
       <workItem from="1710855956393" duration="1658000" />
       <workItem from="1710908215512" duration="3311000" />
       <workItem from="1711113768442" duration="325000" />
+      <workItem from="1711516494408" duration="23000" />
+      <workItem from="1711785509663" duration="72000" />
+      <workItem from="1712672758275" duration="5225000" />
     </task>
     <task id="LOCAL-00001" summary="Создание проекта">
       <option name="closed" value="true" />
@@ -199,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711467163684</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Настраиваю 5x5">
+      <option name="closed" value="true" />
+      <created>1711468266930</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711468266930</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,10 +252,14 @@
     <MESSAGE value="Пофиксили ничью :3" />
     <MESSAGE value="Настройка проекта" />
     <MESSAGE value="переструктурировала под два поля (5х5 и 3х3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="переструктурировала под два поля (5х5 и 3х3)" />
+    <MESSAGE value="Настраиваю 5x5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Настраиваю 5x5" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HappyHouseProject$main.coverage" NAME="main Coverage Results" MODIFIED="1710911255823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HappyHouseProject$main5.coverage" NAME="main5 Coverage Results" MODIFIED="1712674573822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/functions/5x5" />
     <SUITE FILE_PATH="coverage/HappyHouseProject$test.coverage" NAME="test Coverage Results" MODIFIED="1711465165279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/functions" />
+    <SUITE FILE_PATH="coverage/HappyHouseProject$main3.coverage" NAME="main3 Coverage Results" MODIFIED="1712675378919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/functions/3x3" />
+    <SUITE FILE_PATH="coverage/HappyHouseProject$CheckWin.coverage" NAME="CheckWin Coverage Results" MODIFIED="1712674566638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/functions/5x5" />
   </component>
 </project>

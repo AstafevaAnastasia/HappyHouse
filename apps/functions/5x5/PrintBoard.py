@@ -1,4 +1,7 @@
 def print_board(board):
+    print('   1   2   3   4   5')
+    i = 0
     for row in board:
-        print(' | '.join(row))
-        print('-' * 9)
+        i += 1
+        print(i, ' | '.join(row), '|')
+        print('-' * 20)
