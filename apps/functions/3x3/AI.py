@@ -24,11 +24,16 @@ def check_line(sum_O, sum_X):
 
 # Искусственный интеллект: выбор хода
 def AI():
-    error_chance = random.randint(1, 4)  # Генерируем случайное число от 1 до 4
-    if error_chance == 4:
+    error_chance = random.randint(1, 3)  # Генерируем случайное число от 1 до 10
+    if error_chance == 1:
         # Робот делает ошибочный ход, выбирая случайную ячейку, которая уже не занята
         empty_cells = [i for i, cell in enumerate(MapInitialization.maps) if cell not in ["❌", "⭕️"]]
-        step = random.choice(empty_cells)  # Выбираем случайную пустую ячейку
+        if len(empty_cells) == 0:
+            return ""  # Все ячейки заняты, компьютер не может сделать ход
+        step = 0
+        while step < 1 or step > 9 or MapInitialization.maps[step] in ["❌", "⭕️"]:
+            step = random.choice(empty_cells)  # Выбираем случайную пустую ячейку
+
     else:
         step = ""
         # 1) если на какой либо из победных линий 2 свои фигуры и 0 чужих - ставим

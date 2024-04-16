@@ -21,10 +21,10 @@ while game_over == False:
             # 2. Спросим у играющего куда делать ход
             if player1 == True:
                 symbol = "❌"
-                step = int(input("Человек 1, ваш ход: "))
+                step = int(input("Person 1, your move: "))
             else:
                 symbol = "⭕"
-                step = int(input("Человек 2, ваш ход: "))
+                step = int(input("Person 2, your move: "))
 
             GameProcess.step_maps(step, symbol)  # делаем ход в указанную ячейку
             win = GameProcess.get_result()  # определим победителя
@@ -33,18 +33,18 @@ while game_over == False:
             else:
                 game_over = False
         else:
-            print("Ничья!")
+            print("It\'s a tie!")
             game_over = True
-            win = "Дружба"
+            win = "Friendship"
         steps -= 1
 
     else:
         # 2. Спросим у играющего куда делать ход
         if player1 == True:
             symbol = "❌"
-            step = int(input("Человек, ваш ход: "))
+            step = int(input("Person, your move: "))
         else:
-            print("Компьютер делает ход: ")
+            print("The computer makes its move: ")
             symbol = "⭕"
             step = AI.AI()
 
@@ -57,12 +57,12 @@ while game_over == False:
             else:
                 game_over = False
         else:
-            print("Ничья!")
+            print("It\'s a tie!")
             game_over = True
-            win = "Дружба"
+            win = "Friendship"
 
     player1 = not(player1)
 
 # Игра окончена. Покажем карту. Объявим победителя.
 DisplayingTheMap.print_maps()
-print("Победил", win)
+print("Winner: ", win)
