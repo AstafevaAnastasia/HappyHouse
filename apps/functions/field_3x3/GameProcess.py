@@ -1,13 +1,14 @@
-import MapInitialization
 
 # Сделать ход в ячейку
 def step_maps(step, symbol):
+    import MapInitialization
     ind = MapInitialization.maps.index(step)
     MapInitialization.maps[ind] = symbol
 
 
 # Получить текущий результат игры
 def get_result():
+    import MapInitialization
     win = ""
 
     for i in MapInitialization.victories:

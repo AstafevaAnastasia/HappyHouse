@@ -1,7 +1,8 @@
-import MapInitialization
+
 
 # Вывод карты на экран
 def print_maps():
+    import MapInitialization
     print(MapInitialization.maps[0], end="   ")
     print(MapInitialization.maps[1], end="   ")
     print(MapInitialization.maps[2])

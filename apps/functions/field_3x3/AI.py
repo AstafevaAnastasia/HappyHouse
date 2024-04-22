@@ -1,39 +1,38 @@
-import random
-import MapInitialization
 
 # Искусственный интеллект: поиск линии с нужным количеством X и O на победных линиях
 def check_line(sum_O, sum_X):
+    import MapInitialization
     step = ""
     for line in MapInitialization.victories:
         o = 0
         x = 0
 
         for j in range(0, 3):
-            if MapInitialization.maps[line[j]] == "⭕":
-                o = o + 1
+            if MapInitialization.maps[line[j]] == "⭕️":
+                o += 1
             if MapInitialization.maps[line[j]] == "❌":
-                x = x + 1
+                x += 1
 
         if o == sum_O and x == sum_X:
             for j in range(0, 3):
-                if MapInitialization.maps[line[j]] != "⭕" and MapInitialization.maps[line[j]] != "❌":
+                if MapInitialization.maps[line[j]] != "⭕️" and MapInitialization.maps[line[j]] != "❌":
                     step = MapInitialization.maps[line[j]]
+                    return step  # Добавляем выход из функции
 
     return step
 
 
+
 # Искусственный интеллект: выбор хода
 def AI():
+    import random
+    import MapInitialization
     error_chance = random.randint(1, 3)  # Генерируем случайное число от 1 до 10
     if error_chance == 1:
-        # Робот делает ошибочный ход, выбирая случайную ячейку, которая уже не занята
-        empty_cells = [i for i, cell in enumerate(MapInitialization.maps) if cell not in ["❌", "⭕️"]]
-        if len(empty_cells) == 0:
-            return ""  # Все ячейки заняты, компьютер не может сделать ход
-        step = 0
-        while step < 1 or step > 9 or MapInitialization.maps[step] in ["❌", "⭕️"]:
-            step = random.choice(empty_cells)  # Выбираем случайную пустую ячейку
-
+        available_moves = [i for i in range(0, 9) if MapInitialization.maps[i] != "⭕️" and MapInitialization.maps[i] != "❌"]
+        if not available_moves:
+            return None  # Возвращаем None, если нет доступных ходов
+        step = random.choice(available_moves)
     else:
         step = ""
         # 1) если на какой либо из победных линий 2 свои фигуры и 0 чужих - ставим
