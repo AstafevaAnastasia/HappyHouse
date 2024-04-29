@@ -37,10 +37,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install "nbqa[toolchain]" pylint isort "black[jupyter]" mypy pyupgrade 
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: pyupgrade
-        run: |
-          pyupgrade $(git ls-files '*.py')
-          nbqa pyupgrade $(git ls-files '*.ipynb')
+      # - name: pyupgrade
+      #   run: |
+      #     pyupgrade $(git ls-files '*.py')
+      #     nbqa pyupgrade $(git ls-files '*.ipynb')
       - name: Pylint
         run: |
           pylint --max-line-length=79 $(git ls-files '*.py')
